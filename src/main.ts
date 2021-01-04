@@ -31,6 +31,7 @@ export class MyStack extends Stack {
     });
     const ASGSG = asg.node.findChild('InstanceSecurityGroup') as ec2.ISecurityGroup;
     // remove kubernetes.io/cluster/${cluster.clusterName} tag from InstanceSecurityGroup.
+    // If you use awscdk version over 1.82.0, you don't need to remove tag by yourself.
     Tags.of(ASGSG).remove(`kubernetes.io/cluster/${cluster.clusterName}`);
 
     // managed node group do not have any issue.
