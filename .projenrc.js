@@ -15,6 +15,7 @@ const project = new AwsCdkTypeScriptApp({
     'cdk8s-plus',
     'constructs',
   ],
+  dependabot: false,
 });
 
 project.synth();
