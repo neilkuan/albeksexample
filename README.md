@@ -1,5 +1,11 @@
 # albeksexample
 
+## Note!!!
+Before you run deploy, please install helm in your computer and run
+
+- `helm repo add eks https://aws.github.io/eks-charts`
+- `helm repo`
+
 Example repo for use `cdk8s-aws-load-balancer-controller` with eks stack.
 
 
